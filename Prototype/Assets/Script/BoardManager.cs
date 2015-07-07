@@ -14,6 +14,7 @@ public class BoardManager : MonoBehaviour
     public int Limit = 0;
     public int count = 0;
     public Transform Player;
+    public GameObject PeopleIsComing;
     public GameObject LoadingImage;
     public GameObject[] People;
     public GameObject RoadTile;
@@ -53,14 +54,20 @@ public class BoardManager : MonoBehaviour
             {
                 if (x == 0 + a || y == 0 + b)
                 {
-                    GameObject toInstantiate = RoadTile;
-                    Instantiate(toInstantiate, new Vector3((x + a) * 1.55f, (y + b) * 1.4f, 0), toInstantiate.transform.rotation);
+                    GameObject toInstantiate1 = RoadTile;
+                    Instantiate(toInstantiate1, new Vector3((x + a) * 1.55f, (y + b) * 1.4f, 0), toInstantiate1.transform.rotation);
                 }
 
                 else if (x == Random.Range(-5+a,columns - 5 + a))
                 {
-                    GameObject toInstantiate = BulidingTile[Random.Range(0, BulidingTile.Length)];
-                    Instantiate(toInstantiate, new Vector3( (x + a) * 1.78f, (y + b) * 1.84f, 0), toInstantiate.transform.rotation);
+                    GameObject toInstantiate1 = BulidingTile[Random.Range(0, BulidingTile.Length)];
+                    Instantiate(toInstantiate1, new Vector3( (x + a) * 1.78f, (y + b) * 1.84f, 0), toInstantiate1.transform.rotation);
+                }
+
+                if(x == 0 + a && y == 0 + b)
+                {
+                    GameObject toInstantiate3 = PeopleIsComing;
+                    Instantiate(toInstantiate3, new Vector3(x,y,0), toInstantiate3.transform.rotation);
                 }
             }
         }
@@ -74,13 +81,15 @@ public class BoardManager : MonoBehaviour
             {
                 if (x == Random.Range(-80, 80))
                 {
+                    GameObject toInstantiate2 = People[Random.Range(0, People.Length)];
+                    Instantiate(toInstantiate2, new Vector3(x, y, 0), toInstantiate2.transform.rotation);
                     count++;
-                    GameObject toInstantiate = People[Random.Range(0, People.Length)];
-                    Instantiate(toInstantiate, new Vector3(x, y, 0), toInstantiate.transform.rotation);
                 }
 
                 if (Limit == count)
+                {
                     return;
+                }
             }
         }
     }
