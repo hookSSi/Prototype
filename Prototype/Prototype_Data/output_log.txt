@@ -1,0 +1,41 @@
+Initialize engine version: 5.1.1f1 (2046fc06d4d8)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GTX 750 (ID=0x1381)
+    Vendor:   NVIDIA
+    VRAM:     968 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\Sounghoo12\Desktop\Prototype\Prototype_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\Sounghoo12\Desktop\Prototype\Prototype_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\Sounghoo12\Desktop\Prototype\Prototype_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\Sounghoo12\Desktop\Prototype\Prototype_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\Sounghoo12\Desktop\Prototype\Prototype_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\Sounghoo12\Desktop\Prototype\Prototype_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\Sounghoo12\Desktop\Prototype\Prototype_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\Sounghoo12\Desktop\Prototype\Prototype_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\Sounghoo12\Desktop\Prototype\Prototype_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
+Loading C:\Users\Sounghoo12\Desktop\Prototype\Prototype_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
+Platform assembly: C:\Users\Sounghoo12\Desktop\Prototype\Prototype_Data\Managed\RAIN.dll (this message is harmless)
+Loading C:\Users\Sounghoo12\Desktop\Prototype\Prototype_Data\Managed\RAIN.dll into Unity Child Domain
+Platform assembly: C:\Users\Sounghoo12\Desktop\Prototype\Prototype_Data\Managed\RAINMetaform.dll (this message is harmless)
+Loading C:\Users\Sounghoo12\Desktop\Prototype\Prototype_Data\Managed\RAINMetaform.dll into Unity Child Domain
+- Completed reload, in  0.068 seconds
+desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+Platform assembly: C:\Users\Sounghoo12\Desktop\Prototype\Prototype_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\Sounghoo12\Desktop\Prototype\Prototype_Data\Managed\System.dll (this message is harmless)
+Coroutine 'LoadingGame' couldn't be started because the the game object 'GameManager' is inactive!
+ 
+(Filename:  Line: 944)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+Platform assembly: C:\Users\Sounghoo12\Desktop\Prototype\Prototype_Data\Managed\System.Xml.dll (this message is harmless)
+UnloadTime: 3.679207 ms
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 491.
+Total: 0.445361 ms (FindLiveObjects: 0.020526 ms CreateObjectMapping: 0.016794 ms MarkObjects: 0.360767 ms  DeleteObjects: 0.046961 ms)
+
+Platform assembly: C:\Users\Sounghoo12\Desktop\Prototype\Prototype_Data\Managed\Mono.Security.dll (this message is harmless)
