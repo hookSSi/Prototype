@@ -1,0 +1,759 @@
+fileFormatVersion: 2
+guid: 6c868244292a7fc46833a3774bd3da8e
+timeCreated: 1436336634
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Boom_0
+    21300002: Boom_1
+    21300004: Boom_2
+    21300006: Boom_3
+    21300008: Boom_4
+    21300010: Boom_5
+    21300012: Boom_6
+    21300014: Boom_7
+    21300016: Boom_8
+    21300018: Boom_9
+    21300020: Boom_10
+    21300022: Boom_11
+    21300024: Boom_12
+    21300026: Boom_13
+    21300028: Boom_14
+    21300030: Boom_15
+    21300032: Boom_16
+    21300034: Boom_17
+    21300036: Boom_18
+    21300038: Boom_19
+    21300040: Boom_20
+    21300042: Boom_21
+    21300044: Boom_22
+    21300046: Boom_23
+    21300048: Boom_24
+    21300050: Boom_25
+    21300052: Boom_26
+    21300054: Boom_27
+    21300056: Boom_28
+    21300058: Boom_29
+    21300060: Boom_30
+    21300062: Boom_31
+    21300064: Boom_32
+    21300066: Boom_33
+    21300068: Boom_34
+    21300070: Boom_35
+    21300072: Boom_36
+    21300074: Boom_37
+    21300076: Boom_38
+    21300078: Boom_39
+    21300080: Boom_40
+    21300082: Boom_41
+    21300084: Boom_42
+    21300086: Boom_43
+    21300088: Boom_44
+    21300090: Boom_45
+    21300092: Boom_46
+    21300094: Boom_47
+    21300096: Boom_48
+    21300098: Boom_49
+    21300100: Boom_50
+    21300102: Boom_51
+    21300104: Boom_52
+    21300106: Boom_53
+    21300108: Boom_54
+    21300110: Boom_55
+    21300112: Boom_56
+    21300114: Boom_57
+    21300116: Boom_58
+    21300118: Boom_59
+    21300120: Boom_60
+    21300122: Boom_61
+    21300124: Boom_62
+    21300126: Boom_63
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Boom_0
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 919
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Boom_1
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 917
+        width: 20
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Boom_2
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 916
+        width: 19
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Boom_3
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 911
+        width: 22
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Boom_4
+      rect:
+        serializedVersion: 2
+        x: 558
+        y: 908
+        width: 23
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Boom_5
+      rect:
+        serializedVersion: 2
+        x: 684
+        y: 908
+        width: 28
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Boom_6
+      rect:
+        serializedVersion: 2
+        x: 812
+        y: 909
+        width: 26
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Boom_7
+      rect:
+        serializedVersion: 2
+        x: 940
+        y: 908
+        width: 28
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Boom_8
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 780
+        width: 32
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Boom_9
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 779
+        width: 32
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Boom_10
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 779
+        width: 34
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Boom_11
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 776
+        width: 38
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Boom_12
+      rect:
+        serializedVersion: 2
+        x: 554
+        y: 777
+        width: 37
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Boom_13
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 777
+        width: 40
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Boom_14
+      rect:
+        serializedVersion: 2
+        x: 808
+        y: 776
+        width: 40
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Boom_15
+      rect:
+        serializedVersion: 2
+        x: 936
+        y: 775
+        width: 41
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Boom_16
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 647
+        width: 44
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Boom_17
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 647
+        width: 45
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Boom_18
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 647
+        width: 44
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Boom_19
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 646
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Boom_20
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 646
+        width: 49
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Boom_21
+      rect:
+        serializedVersion: 2
+        x: 676
+        y: 646
+        width: 49
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Boom_22
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 644
+        width: 50
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Boom_23
+      rect:
+        serializedVersion: 2
+        x: 931
+        y: 644
+        width: 53
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Boom_24
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 516
+        width: 53
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Boom_25
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 516
+        width: 56
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Boom_26
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 515
+        width: 57
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Boom_27
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 515
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Boom_28
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 514
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Boom_29
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 514
+        width: 60
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Boom_30
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 514
+        width: 61
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Boom_31
+      rect:
+        serializedVersion: 2
+        x: 927
+        y: 512
+        width: 61
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Boom_32
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 384
+        width: 64
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Boom_33
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 385
+        width: 65
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Boom_34
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 384
+        width: 65
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Boom_35
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 384
+        width: 66
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Boom_36
+      rect:
+        serializedVersion: 2
+        x: 539
+        y: 384
+        width: 69
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Boom_37
+      rect:
+        serializedVersion: 2
+        x: 667
+        y: 384
+        width: 68
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Boom_38
+      rect:
+        serializedVersion: 2
+        x: 795
+        y: 384
+        width: 69
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Boom_39
+      rect:
+        serializedVersion: 2
+        x: 923
+        y: 384
+        width: 69
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Boom_40
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 256
+        width: 70
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Boom_41
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 256
+        width: 71
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Boom_42
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 256
+        width: 72
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Boom_43
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 256
+        width: 72
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Boom_44
+      rect:
+        serializedVersion: 2
+        x: 539
+        y: 256
+        width: 73
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Boom_45
+      rect:
+        serializedVersion: 2
+        x: 667
+        y: 256
+        width: 74
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Boom_46
+      rect:
+        serializedVersion: 2
+        x: 796
+        y: 256
+        width: 74
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Boom_47
+      rect:
+        serializedVersion: 2
+        x: 923
+        y: 256
+        width: 75
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Boom_48
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 128
+        width: 76
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Boom_49
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 128
+        width: 76
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Boom_50
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 128
+        width: 76
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Boom_51
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 128
+        width: 77
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Boom_52
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 128
+        width: 78
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Boom_53
+      rect:
+        serializedVersion: 2
+        x: 667
+        y: 128
+        width: 79
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Boom_54
+      rect:
+        serializedVersion: 2
+        x: 796
+        y: 128
+        width: 78
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Boom_55
+      rect:
+        serializedVersion: 2
+        x: 925
+        y: 128
+        width: 78
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Boom_56
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 0
+        width: 79
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Boom_57
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 0
+        width: 81
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Boom_58
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 0
+        width: 80
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Boom_59
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 0
+        width: 80
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Boom_60
+      rect:
+        serializedVersion: 2
+        x: 542
+        y: 0
+        width: 81
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Boom_61
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 0
+        width: 82
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Boom_62
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 0
+        width: 81
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Boom_63
+      rect:
+        serializedVersion: 2
+        x: 926
+        y: 0
+        width: 83
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

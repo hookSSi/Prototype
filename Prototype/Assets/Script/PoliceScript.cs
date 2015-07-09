@@ -13,6 +13,7 @@ public class PoliceScript : MonoBehaviour {
     public GameObject Bullet;
     public GameObject FirePosition;
     bool isSearch = false;
+    bool isSearch2 = false;
     private float ftime = 0f;
 
     void Update() 
@@ -42,7 +43,6 @@ public class PoliceScript : MonoBehaviour {
         {
             Gun.SetActive(Equip);
             Search(); 
-            Siren.SetActive(SirenBool);
             PoliceMove.SetActive(!SirenBool);
         }
     }
@@ -51,8 +51,10 @@ public class PoliceScript : MonoBehaviour {
     {
         float distance = Vector2.Distance(GameObject.Find("PlayerPosition").GetComponent<Transform>().position, transform.position);
 
-        if (distance <= 6)
+        if (distance <= 8)
             isSearch = true;
+        if (distance > 20)
+            Siren.SetActive(SirenBool);
     }
 
     void Attack()
