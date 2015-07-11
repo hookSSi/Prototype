@@ -4,9 +4,12 @@ using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour {
 
-    Animator anim;
     public float Speed = 5f;
     public float ftime = 0;
+    public Animator right;
+    public Animator left;
+    private bool rightBool = false;
+    private bool leftBool = false;
     public GameObject Gun;
     public GameObject Hands;
     public Transform FirePosition;
@@ -14,11 +17,12 @@ public class PlayerController : MonoBehaviour {
     public Text AmmoText;
     public int PistolAmmo = 15;
     private bool Equip2 = false;
-    private bool Equip1 = false;
+    private bool Equip1 = true;
 
 	void Start () 
     {
-        anim = GameObject.Find("Player-Hands").GetComponent<Animator>();
+        right.SetBool("RightBool",rightBool);
+        left.SetBool("LeftBool",leftBool);
 	}
 	
 	void FixedUpdate () 
@@ -26,7 +30,6 @@ public class PlayerController : MonoBehaviour {
         ftime += Time.deltaTime;
         float dirX = Input.GetAxis("Horizontal");
         float dirY = Input.GetAxis("Vertical");
-        
         Vector3 MoveMent = new Vector3 (dirX,dirY,0);
 
         GetComponent<Rigidbody2D>().velocity = MoveMent * Speed;
@@ -57,7 +60,14 @@ public class PlayerController : MonoBehaviour {
         }
 
         if (Input.GetMouseButtonDown(0) && Equip1)
-            FistAttack();
+            StartCoroutine("leftAttack");
+        else
+            left.SetBool("LeftBool", leftBool);
+
+        if (Input.GetMouseButtonDown(1) && Equip1)
+            StartCoroutine("rightAttack");
+        else
+            right.SetBool("RightBool", rightBool);
     }
 
     void EquipGun()
@@ -88,13 +98,15 @@ public class PlayerController : MonoBehaviour {
         AmmoText.text = "15 / " + PistolAmmo; 
     }
 
-    void FistAttack()
+    IEnumerator leftAttack()
     {
-        float ftime = 0;
-        ftime += Time.deltaTime;
-        anim.SetBool("EquipHands", true);
+        left.SetBool("LeftBool", !leftBool);
+        yield return new WaitForSeconds(0.1f);
+    }
 
-        if(ftime>2)
-            anim.SetBool("EquipHands", false);
+    IEnumerator rightAttack()
+    {
+        right.SetBool("RightBool", !rightBool);
+        yield return new WaitForSeconds(0.1f);
     }
 }

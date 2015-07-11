@@ -42,7 +42,7 @@ public class DeadOrAlive : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D other) 
     {
-        if(other.gameObject.tag == "Attack" && DEAD == false)
+        if (other.gameObject.tag == "Attack" && DEAD == false)
         {
             Destroy(other.gameObject);
             DEAD = true;

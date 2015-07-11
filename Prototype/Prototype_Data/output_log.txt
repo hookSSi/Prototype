@@ -20,7 +20,7 @@ Platform assembly: C:\Users\Sounghoo12\Desktop\Prototype\Prototype_Data\Managed\
 Loading C:\Users\Sounghoo12\Desktop\Prototype\Prototype_Data\Managed\RAIN.dll into Unity Child Domain
 Platform assembly: C:\Users\Sounghoo12\Desktop\Prototype\Prototype_Data\Managed\RAINMetaform.dll (this message is harmless)
 Loading C:\Users\Sounghoo12\Desktop\Prototype\Prototype_Data\Managed\RAINMetaform.dll into Unity Child Domain
-- Completed reload, in  0.061 seconds
+- Completed reload, in  0.067 seconds
 desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.

@@ -31,7 +31,7 @@ public class BarScript : MonoBehaviour {
         Instantiate(CashSound);
         Instantiate(DrinkingSound);
         Instantiate(Effect, BarPosition.position,BarPosition.rotation);
-        while (GameObject.Find("GameManager").GetComponent<GameManager>().Money >= 100)
+        while (GameObject.Find("GameManager").GetComponent<GameManager>().Money > 99)
         {
             GameObject.Find("GameManager").GetComponent<GameManager>().Money -= 100;
             GameObject.Find("GameManager").GetComponent<GameManager>().AlcoholBarSlider.value += 0.05f;

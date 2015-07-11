@@ -17,7 +17,7 @@ public class AmmoShopScript : MonoBehaviour {
     {
         if (other.tag == "Player")
         {
-            if (GameObject.Find("Player").GetComponent<PlayerController>().PistolAmmo != 15 && GameObject.Find("GameManager").GetComponent<GameManager>().Money >= 100 && !In)
+            if (GameObject.Find("Player").GetComponent<PlayerController>().PistolAmmo != 15 && GameObject.Find("GameManager").GetComponent<GameManager>().Money > 99 && !In)
             {
                 In = true;
                 StartCoroutine("BuyingAmmo");
@@ -30,7 +30,18 @@ public class AmmoShopScript : MonoBehaviour {
     {
         Instantiate(CashSound);
         Instantiate(Effect, AmmoShopPosition.position, AmmoShopPosition.rotation);
-        GameObject.Find("GameManager").GetComponent<GameManager>().Money -= 100 * (15 - GameObject.Find("Player").GetComponent<PlayerController>().PistolAmmo);
+
+        if (GameObject.Find("GameManager").GetComponent<GameManager>().Money < 100 * (15 - GameObject.Find("Player").GetComponent<PlayerController>().PistolAmmo))
+        {
+            while (GameObject.Find("GameManager").GetComponent<GameManager>().Money - 100 >= 0)
+            {
+                GameObject.Find("GameManager").GetComponent<GameManager>().Money -= 100;
+            } 
+        }    
+
+        else
+            GameObject.Find("GameManager").GetComponent<GameManager>().Money -= 100 * (15 - GameObject.Find("Player").GetComponent<PlayerController>().PistolAmmo);
+
         GameObject.Find("Player").GetComponent<PlayerController>().PistolAmmo = 15;
         GameObject.Find("Player").GetComponent<PlayerController>().AmmoText.text = "15 / " + GameObject.Find("Player").GetComponent<PlayerController>().PistolAmmo;
         yield return new WaitForSeconds(1f);

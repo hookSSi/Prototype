@@ -6,9 +6,13 @@ public class GameManager : MonoBehaviour {
 
     private float ftime = 0f;
     private float Timer = 0f;
+    public bool SirenBool = false;
     public GameObject Vomit;
     public GameObject LoadingImage;
+    public GameObject Siren;
+    public GameObject HowToPlayUI;
     public bool GunMan = false;
+    public bool Active = false;
     public int DEADcount = 0;
     public int Money = 0;
     public float ALCOHOL = 100;
@@ -26,7 +30,6 @@ public class GameManager : MonoBehaviour {
         StartCoroutine("AlcoholUpdate");
         StartCoroutine("ALCOHOLreduce");
         StartCoroutine("DeltaTime");
-        Screen.SetResolution(1600, 480, true);
 	}
 
     IEnumerator ALCOHOLreduce()
@@ -36,6 +39,13 @@ public class GameManager : MonoBehaviour {
         Timer += Time.deltaTime;
         yield return new WaitForSeconds(0.1f);
         StartCoroutine("ALCOHOLreduce");
+    }
+
+    IEnumerator SirenCheck()
+    {
+        Siren.SetActive(SirenBool);
+        yield return new WaitForSeconds(0.1f);
+        StartCoroutine("SirenCheck");
     }
 
     IEnumerator DeltaTime()
@@ -73,6 +83,7 @@ public class GameManager : MonoBehaviour {
     void FixedUpdate()
     {
         ALCOHOLreduce();
+        Siren.SetActive(SirenBool);
     }
 
     IEnumerator EndGame()
@@ -154,6 +165,12 @@ public class GameManager : MonoBehaviour {
     {
         StartCoroutine("LoadingGame");
         Application.LoadLevel(1);
+    }
+
+    public void HowToPlay()
+    {
+        Active = !Active;
+        HowToPlayUI.SetActive(Active);
     }
 
     IEnumerator LoadingGame()
