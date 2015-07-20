@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour {
     private float ftime = 0f;
     private float Timer = 0f;
     public bool SirenBool = false;
+    public Animator CameraWarning;
     public GameObject Vomit;
     public GameObject LoadingImage;
     public GameObject Siren;
@@ -27,6 +28,7 @@ public class GameManager : MonoBehaviour {
 
 	void Start () 
     {
+        Screen.SetResolution(1600, 480, false);
         StartCoroutine("AlcoholUpdate");
         StartCoroutine("ALCOHOLreduce");
         StartCoroutine("DeltaTime");
@@ -80,6 +82,7 @@ public class GameManager : MonoBehaviour {
             GameObject.Find("Player").GetComponent<DeadOrAlive>().DEAD = true;
         }
 	}
+
     void FixedUpdate()
     {
         ALCOHOLreduce();
@@ -94,63 +97,23 @@ public class GameManager : MonoBehaviour {
         Application.LoadLevel(0);
     }
 
-    void AlcoholPower(int i,float HowMuch)
-    {
-        switch(i)
-        {
-            case 0: GameObject.Find("Player").GetComponent<PlayerController>().Speed = 2;
-                    StartCoroutine("SlowSpeed");
-                break;
-            case 1: StartCoroutine("Twist");
-                break;
-            case 2: StartCoroutine("Twist");
-                break;
-            case 3: StartCoroutine("Twist");
-                break;
-        }
-    }
-
-    IEnumerator SlowSpeed()
-    {
-        yield return new WaitForSeconds(1 / AlcoholBarSlider.value);
-        GameObject.Find("Player").GetComponent<PlayerController>().Speed = 5f;
-    }
-
-    IEnumerator OddController()
-    {
-        yield return new WaitForSeconds(1 / AlcoholBarSlider.value);
-        GameObject.Find("Player").GetComponent<PlayerController>().Speed = 5f;
-    }
-
-    IEnumerator Twist()
-    {
-        GameObject.Find("Player").GetComponent<Rigidbody2D>().AddForce(new Vector2(Random.Range(-50, 50), Random.Range(-50, 50)) * AlcoholBarSlider.value * 10);
-        yield return new WaitForSeconds(1.5f - AlcoholBarSlider.value);
-        StartCoroutine("Twist");
-    }
-
-    IEnumerator AlcoholPowerSelect()
-    {
-        AlcoholPower(Random.Range(0, 3), AlcoholBarSlider.value);
-        yield return new WaitForSeconds(1 / AlcoholBarSlider.value);
-    }
-
      IEnumerator AlcoholUpdate()
     {
         if (AlcoholBarSlider.value >= 0.8)
         {
-            StartCoroutine("AlcoholPowerSelect");
+            CameraWarning.SetBool("Warning", false);
         }
 
-        else if (AlcoholBarSlider.value >= 0.5)
+        else if (AlcoholBarSlider.value >= 0.4)
         {
-            StartCoroutine("AlcoholPowerSelect");
+            CameraWarning.SetBool("Warning", false);
         }
 
-        else if (AlcoholBarSlider.value >= 0.3)
+        else if (AlcoholBarSlider.value >= 0.2)
         {
-            StartCoroutine("AlcoholPowerSelect");
+            CameraWarning.SetBool("Warning", true);
         }
+
         yield return new WaitForSeconds(3 - AlcoholBarSlider.value * 2);
 
         StartCoroutine("AlcoholUpdate");

@@ -4,6 +4,7 @@ using System.Collections;
 public class PeopleisComing : MonoBehaviour {
 
     public GameObject People;
+    public float RespawnTime = 0;
 
 	void Start () 
     {
@@ -20,8 +21,8 @@ public class PeopleisComing : MonoBehaviour {
 
     IEnumerator PeopleIsComing()
     {
-        yield return new WaitForSeconds(10f);
-        Instantiate(People, new Vector3(Random.Range(this.gameObject.transform.position.x - 5, this.gameObject.transform.position.x + 5), this.gameObject.transform.position.y - 5, this.gameObject.transform.position.y + 5), this.gameObject.transform.rotation);
+        yield return new WaitForSeconds(RespawnTime);
+        Instantiate(People, new Vector3(Random.Range(this.gameObject.transform.position.x - 20, this.gameObject.transform.position.x + 20), this.gameObject.transform.position.y - 20, this.gameObject.transform.position.y + 20), this.gameObject.transform.rotation);
         StopCoroutine("PeopleIsComing");
     }
 }

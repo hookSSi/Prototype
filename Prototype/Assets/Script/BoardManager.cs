@@ -43,7 +43,6 @@ public class BoardManager : MonoBehaviour
             for (b = 0; b != -25; b -= 5)
                 BoardSet();
         }
-        StartCoroutine("OneDeadTwoLife");
     }
 
     void BoardSet()
@@ -100,7 +99,7 @@ public class BoardManager : MonoBehaviour
         {
             for (int i = 0; i < 3; i++)
             {
-                GameObject toInstantiate = People[Random.Range(0, People.Length)];
+                GameObject toInstantiate = People[0];
                 Instantiate(toInstantiate, new Vector3(Random.Range(-50, 50), Random.Range(-50, 50), 0), toInstantiate.transform.rotation);
             }
             GameObject.Find("GameManager").GetComponent<GameManager>().DEADcount = 0;

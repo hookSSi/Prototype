@@ -5,12 +5,11 @@ using System.Timers;
 public class CitizenScript : MonoBehaviour {
 
     private bool ScreamingBool = false;
-    public float MoveSpeed = 0.5f;
     public bool isSearch = false;
     public GameObject Screaming;
     public GameObject RunningAI;
 
-    void Update()
+    void OntriggerEnter(Collider2D other)
     {
         Search();
 
