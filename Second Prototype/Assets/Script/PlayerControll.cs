@@ -5,23 +5,27 @@ public class PlayerControll : MonoBehaviour {
 
     public const string UP = "Up";
     public GameObject TileScale;
+    public Transform PlayerPosition;
     private float X;
     private float Y;
+    private Vector2 Forward;
+    private Vector2 Left;
+    private Vector2 Right;
+    private RaycastHit2D hit;
+    private float distance;
 
     public delegate void SwapeDelegate(string way);
 
     void Start()
     {
+        Forward = new Vector2(X, -Y);
+        Left = new Vector2(-X, -Y);
+        Right = new Vector2(X, Y);
+
          X = (1.3f * TileScale.transform.localScale.x) / 2;
          Y = (0.97f * TileScale.transform.localScale.y) / 3;
-    }
 
-    public SwapeDelegate swape
-    {
-        set
-        {
-            swapeDelegate = value;
-        }
+         distance = Vector2.Distance(PlayerPosition.position, ((Vector2)PlayerPosition.position + Forward));
     }
 
     private SwapeDelegate swapeDelegate;
@@ -67,31 +71,41 @@ public class PlayerControll : MonoBehaviour {
         var lastPos = touch.position;
         var distance = Vector2.Distance(lastPos, touchStartPos);
 
-        if (distance > minSwipeDistancePixels)
+        if (distance > minSwipeDistancePixels && Time.timeScale > 0)
         {
             float dy = lastPos.y - touchStartPos.y;
             float dx = lastPos.x - touchStartPos.x;
 
             float angle = Mathf.Rad2Deg * Mathf.Atan2(dx, dy);
 
-            angle = (360 + angle - 45) % 360;
+            angle = (360 + angle) % 360;
 
-            if (0 < angle && angle < 90)
+            if (290 < angle && angle < 340)
             {
-                swapeDelegate("UP");
-                GameObject.FindGameObjectWithTag("Tile").transform.Translate(X, -Y, 0);
-                GameObject.Find("BoardManager").GetComponent<BoardScript>().BoardSet(15, 0);
-                GameObject.Find("BoardManager").GetComponent<BoardScript>().Count = 0;
+                hit = Physics2D.Raycast((Vector2)PlayerPosition.position - Forward, Forward, distance);
+
+                if(hit.collider == null)
+                {
+                    GameObject.FindGameObjectWithTag("BoardMaster").transform.Translate(Forward);
+                    GameObject.Find("BoardManager").GetComponent<BoardScript>().BoardSet(15, 0);
+                    GameObject.Find("BoardManager").GetComponent<BoardScript>().Count = 0;
+                }   
             }
 
-            else if(90 < angle && angle < 180)
+            else if (20 < angle && angle < 70)
             {
-                GameObject.FindGameObjectWithTag("Player").transform.Translate(X, Y, 0);
+                hit = Physics2D.Raycast(PlayerPosition.position, Right, distance);
+
+                if (hit.collider == null)
+                    GameObject.FindGameObjectWithTag("Player").transform.Translate(X, Y, 0);
             }
 
-            else if(270 < angle && angle < 360)
+            else if (200 < angle && angle < 250)
             {
-                GameObject.FindGameObjectWithTag("Player").transform.Translate(-X, -Y, 0);
+                hit = Physics2D.Raycast(PlayerPosition.position, Left, distance);
+
+                if (hit.collider == null)
+                    GameObject.FindGameObjectWithTag("Player").transform.Translate(-X, -Y, 0);
             }
         }
     }	

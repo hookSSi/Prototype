@@ -5,6 +5,7 @@ public class CarScript : MonoBehaviour {
 
     public float Speed = 0;
     public Vector2 Toward;
+    public bool Visible;
 
 	void Start () 
     {
@@ -14,11 +15,16 @@ public class CarScript : MonoBehaviour {
 	void Update () 
     {
         transform.GetComponent<Rigidbody2D>().velocity = Toward * Speed * Time.deltaTime;
+
+        if (this.tag == "CarNE")
+            GetComponent<SpriteRenderer>().enabled = !GameObject.Find("GameManager").GetComponent<GameManager>().MusicBool[0];
+        else if(this.tag == "CarSW")
+            GetComponent<SpriteRenderer>().enabled = !GameObject.Find("GameManager").GetComponent<GameManager>().MusicBool[1];
 	}
 
-    void OntriggerEnter2D(Collider2D other)
+    void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.tag == "Player")
+        if (other.tag == "Player")
         {
             GameObject.Find("GameManager").GetComponent<GameManager>().PlayerLife = false;
         }

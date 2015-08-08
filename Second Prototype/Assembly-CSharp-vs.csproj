@@ -47,8 +47,6 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Script\BoardScript.cs" />
-     <Compile Include="Assets\Script\BuildingScript.cs" />
-     <Compile Include="Assets\Script\CameraScript.cs" />
      <Compile Include="Assets\Script\CarScript.cs" />
      <Compile Include="Assets\Script\EndTile.cs" />
      <Compile Include="Assets\Script\GameManager.cs" />

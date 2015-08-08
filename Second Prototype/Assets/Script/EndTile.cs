@@ -10,7 +10,7 @@ public class EndTile : MonoBehaviour {
 
     void OnTriggerExit2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Tile" || other.gameObject.tag == "Car")
+        if (other.gameObject.tag == "Tile" || other.gameObject.tag == "CarSW" || other.gameObject.tag == "CarNE")
         {
             Destroy(other.gameObject);
         }
