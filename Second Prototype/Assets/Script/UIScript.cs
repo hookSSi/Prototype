@@ -4,12 +4,14 @@ using System.Collections;
 public class UIScript : MonoBehaviour {
 
     public Animator SoundOnOffBool;
+    public GameObject[] MainMenu;
     public GameObject PlayerUI;
     public GameObject StartUI;
     public GameObject HowToPlayUI;
     public GameObject SettingUI;
     public GameObject CreditUI;
     public GameObject MenuUI;
+    public AudioSource Music;
     public bool Trigger = false;
     public bool StartTrigger = false;
     private float distance;
@@ -21,6 +23,7 @@ public class UIScript : MonoBehaviour {
 
     public void GetStart()
     {
+        Time.timeScale = 1;
         StartUI.SetActive(StartTrigger);
         StartTrigger = !StartTrigger;
         PlayerUI.SetActive(StartTrigger);
@@ -30,18 +33,27 @@ public class UIScript : MonoBehaviour {
     {
         Trigger = !Trigger;
         HowToPlayUI.SetActive(Trigger);
+
+        for (int i = 0; i < MainMenu.Length; i++)
+            MainMenu[i].SetActive(!Trigger);
     }
 
     public void Setting()
     {
         Trigger = !Trigger;
         SettingUI.SetActive(Trigger);
+
+        for (int i = 0; i < MainMenu.Length; i++)
+            MainMenu[i].SetActive(!Trigger);
     }
 
     public void Credit()
     {
         Trigger = !Trigger;
         CreditUI.SetActive(Trigger);
+
+        for (int i = 0; i < MainMenu.Length; i++)
+            MainMenu[i].SetActive(!Trigger);
     }
 
     public void Menu()
@@ -50,7 +62,11 @@ public class UIScript : MonoBehaviour {
         MenuUI.SetActive(Trigger);
 
         if (Trigger)
+        {
             Time.timeScale = 0;
+            Music.Stop();
+        }
+       
         else
             Time.timeScale = 1;
     }
@@ -83,7 +99,6 @@ public class UIScript : MonoBehaviour {
     public void Restart()
     {
         GameObject.Find("UIManager").GetComponent<UIScript>().StartTrigger = true;
-        Time.timeScale = 1;
         Application.LoadLevel("0"); 
     }
 }

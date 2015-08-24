@@ -82,7 +82,7 @@ public class BoardScript : MonoBehaviour {
 
             Count += Time.deltaTime;
 
-            if (Count > 300)
+            if (Count > 5)
             {
                 GameObject.Find("GameManager").GetComponent<GameManager>().PlayerLife = false;
             }

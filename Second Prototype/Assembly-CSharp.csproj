@@ -51,6 +51,7 @@
      <Compile Include="Assets\Script\EndTile.cs" />
      <Compile Include="Assets\Script\GameManager.cs" />
      <Compile Include="Assets\Script\PlayerControll.cs" />
+     <Compile Include="Assets\Script\RemoveGameObject.cs" />
      <Compile Include="Assets\Script\RespawnLocation.cs" />
      <Compile Include="Assets\Script\UIScript.cs" />
      <Compile Include="Assets\Script\WaterScript.cs" />

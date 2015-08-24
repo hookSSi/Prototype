@@ -3,29 +3,29 @@ using System.Collections;
 
 public class PlayerControll : MonoBehaviour {
 
-    public const string UP = "Up";
     public GameObject TileScale;
-    public Transform PlayerPosition;
+    private Transform PlayerPosition;
     private float X;
     private float Y;
     private Vector2 Forward;
     private Vector2 Left;
     private Vector2 Right;
     private RaycastHit2D hit;
-    private float distance;
+    public float distance1;
 
     public delegate void SwapeDelegate(string way);
 
     void Start()
     {
+        X = (1.3f * TileScale.transform.localScale.x) / 2;
+        Y = (0.97f * TileScale.transform.localScale.y) / 3;
+
+        PlayerPosition = GameObject.FindGameObjectWithTag("Player").transform;
         Forward = new Vector2(X, -Y);
         Left = new Vector2(-X, -Y);
         Right = new Vector2(X, Y);
 
-         X = (1.3f * TileScale.transform.localScale.x) / 2;
-         Y = (0.97f * TileScale.transform.localScale.y) / 3;
-
-         distance = Vector2.Distance(PlayerPosition.position, ((Vector2)PlayerPosition.position + Forward));
+        distance1 = Vector2.Distance(PlayerPosition.position, ((Vector2)PlayerPosition.position + Forward));
     }
 
     private SwapeDelegate swapeDelegate;
@@ -63,50 +63,96 @@ public class PlayerControll : MonoBehaviour {
                         break;
                 }
             }
-        }    
+        }
     }
 
-    private void Swipe(Touch touch)
+    void Swipe(Touch touch)
     {
         var lastPos = touch.position;
         var distance = Vector2.Distance(lastPos, touchStartPos);
 
         if (distance > minSwipeDistancePixels && Time.timeScale > 0)
         {
-            float dy = lastPos.y - touchStartPos.y;
+           /* float dy = lastPos.y - touchStartPos.y;
             float dx = lastPos.x - touchStartPos.x;
 
             float angle = Mathf.Rad2Deg * Mathf.Atan2(dx, dy);
 
             angle = (360 + angle) % 360;
 
-            if (290 < angle && angle < 340)
+            if (280 < angle && angle < 350) // 앞으로 이동
             {
-                hit = Physics2D.Raycast((Vector2)PlayerPosition.position - Forward, Forward, distance);
+                hit = Physics2D.Raycast(((Vector2)PlayerPosition.position - Forward), Forward, distance1);
 
                 if(hit.collider == null)
                 {
-                    GameObject.FindGameObjectWithTag("BoardMaster").transform.Translate(Forward);
+                    GameObject.Find("BoardMaster").transform.Translate(X,-Y,0);
                     GameObject.Find("BoardManager").GetComponent<BoardScript>().BoardSet(15, 0);
                     GameObject.Find("BoardManager").GetComponent<BoardScript>().Count = 0;
                 }   
             }
 
-            else if (20 < angle && angle < 70)
+            else if (20 < angle && angle < 70) // 오른쪽 이동
             {
-                hit = Physics2D.Raycast(PlayerPosition.position, Right, distance);
+                hit = Physics2D.Raycast(PlayerPosition.position, Right, distance1);
 
                 if (hit.collider == null)
                     GameObject.FindGameObjectWithTag("Player").transform.Translate(X, Y, 0);
             }
 
-            else if (200 < angle && angle < 250)
+            else if (200 < angle && angle < 250) // 왼쪽 이동
             {
-                hit = Physics2D.Raycast(PlayerPosition.position, Left, distance);
+                hit = Physics2D.Raycast(PlayerPosition.position, Left, distance1);
 
                 if (hit.collider == null)
                     GameObject.FindGameObjectWithTag("Player").transform.Translate(-X, -Y, 0);
-            }
+            }*/
         }
-    }	
+
+        else
+        {
+            LeftRightTouch(touch);
+        }
+    }
+
+    void LeftRightTouch(Touch touch)
+    {
+        if (touch.position.x < Screen.height * 0.2)
+        {
+            GameObject.Find("GameManager").GetComponent<GameManager>().Right();
+        }
+
+        else if (touch.position.x > Screen.height * 0.8)
+        {
+            GameObject.Find("GameManager").GetComponent<GameManager>().Left();
+        }
+    }
+
+    public void FrontMove()
+    {
+        hit = Physics2D.Raycast(((Vector2)PlayerPosition.position - Forward), Forward, distance1);
+
+        if (hit.collider == null)
+        {
+            GameObject.Find("BoardMaster").transform.Translate(X, -Y, 0);
+            GameObject.Find("BoardManager").GetComponent<BoardScript>().BoardSet(15, 0);
+            GameObject.Find("BoardManager").GetComponent<BoardScript>().Count = 0;
+        }   
+    }
+
+    public void RightMove()
+    {
+        hit = Physics2D.Raycast(PlayerPosition.position, Right, distance1);
+
+        if (hit.collider == null)
+            GameObject.FindGameObjectWithTag("Player").transform.Translate(X, Y, 0);
+    }
+
+    public void LeftMove()
+    {
+        hit = Physics2D.Raycast(PlayerPosition.position, Left, distance1);
+
+        if (hit.collider == null)
+            GameObject.FindGameObjectWithTag("Player").transform.Translate(-X, -Y, 0);
+    }
 }

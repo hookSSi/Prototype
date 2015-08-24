@@ -6,6 +6,7 @@ public class CarScript : MonoBehaviour {
     public float Speed = 0;
     public Vector2 Toward;
     public bool Visible;
+    public GameObject HitSound;
 
 	void Start () 
     {
@@ -26,6 +27,8 @@ public class CarScript : MonoBehaviour {
     {
         if (other.tag == "Player")
         {
+            Instantiate(HitSound);
+            Handheld.Vibrate();
             GameObject.Find("GameManager").GetComponent<GameManager>().PlayerLife = false;
         }
     }
